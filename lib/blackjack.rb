@@ -72,7 +72,6 @@ def runner
   welcome
 
   current_hand = initial_round
-  current_hand = hit?(current_hand)
 
 
   until current_hand >= 21
