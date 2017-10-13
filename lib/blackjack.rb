@@ -68,14 +68,12 @@ def invalid_command
 end
 
 def runner
-
   welcome
-
-  current_hand = initial_round
-
-
-  until current_hand >= 21
-      current_hand = hit?(current_hand)
+  initial_round
+  total = initial_round
+  until total > 21
+    hit?(total)
+    total = hit?(initial_round)
   end
-  end_game(current_hand)
+  end_game(total)
 end
